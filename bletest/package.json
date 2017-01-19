@@ -11,5 +11,8 @@
   "dependencies": {
     "bleno": "^0.4.1",
     "pi-wifi": "^1.0.1"
+  },
+  "devDependencies":{
+    "electron-rebuild":"^1.5.7"
   }
 }

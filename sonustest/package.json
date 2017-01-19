@@ -11,5 +11,8 @@
   "dependencies": {
     "grpc": "^1.0.1",
     "sonus": "^0.1.4"
+  },
+  "devDependencies":{
+    "electron-rebuild":"^1.5.7"
   }
 }
