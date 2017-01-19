@@ -26,7 +26,7 @@ if(typeof config.speech.model == 'string'){
 }
 
 const language = config.language
-const sonus = Sonus.init({ hotwords, language }, speech)
+const sonus = Sonus.init({ hotwords, language, recordProgram: "arecord" }, speech)
 
 // Start Recognition
 Sonus.start(sonus)
