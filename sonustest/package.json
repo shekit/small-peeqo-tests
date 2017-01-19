@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "grpc": "^1.0.1",
     "sonus": "^0.1.4"
   },
   "devDependencies":{
