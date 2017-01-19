@@ -1,4 +1,5 @@
-language: "en-US",
+module.exports = {
+	language: "en-US",
 	speech: {
         projectId: '',
         keyFilename: 'keyfile.json',
@@ -7,3 +8,4 @@ language: "en-US",
         sensitivity: 0.5, // Keyword getting too many false positives or not detecting? Change this.
         continuous: false // After a keyword is detected keep listening until speech is not heard
     }
+  }
