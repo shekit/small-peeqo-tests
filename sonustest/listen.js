@@ -25,8 +25,13 @@ if(typeof config.speech.model == 'string'){
   }
 }
 
+const os = require('os')
+
+const recordProgram = (os.arch() == 'arm') ? "arecord" : "rec"
+
+
 const language = config.language
-const sonus = Sonus.init({ hotwords, language, recordProgram: "arecord" }, speech)
+const sonus = Sonus.init({ hotwords, language, recordProgram}, speech)
 
 // Start Recognition
 Sonus.start(sonus)
