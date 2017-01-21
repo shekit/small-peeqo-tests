@@ -19,12 +19,12 @@ Offline.options = {
 
 Offline.on('down', function(){
 	console.log("NO INTERNET")
-	startBleAdvertising()
+	//startBleAdvertising()
 })
 
 Offline.on('up', function(){
 	console.log("YAY INTERNET")
-	stopBleAdvertising()
+	//stopBleAdvertising()
 })
 
 Offline.on('checking', function(){
