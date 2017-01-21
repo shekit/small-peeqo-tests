@@ -1,5 +1,6 @@
 const bleno = require('bleno')
-const wifi = require('pi-wifi')
+
+const piutils = require('pi-utils')
 
 var bleAdvertising = false;
 var ble_name = 'peeqo';
@@ -65,9 +66,15 @@ bleno.on('advertisingStart', function(error){
 								console.log("Wifi Password: "+this.value.toString("utf-8"))
 								newWifi.password = this.value.toString("utf-8")
 
-								wifi.connect(newWifi.ssid, newWifi.password, function(){
-									console.log("succesfully connected to wifi")
-								});
+								console.log("SSID:", newWifi.ssid)
+								console.log("PASS:", newWifi.password)
+
+								piutils.wifi.connect(newWifi.ssid, newWifi.password)
+									.then(result => {
+										if(result){
+											console.log("Connected")
+										}
+									})
 
 								callback(this.RESULT_SUCCESS);
 							}

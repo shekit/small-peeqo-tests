@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bleno": "^0.4.1",
+    "pi-utils": "^0.1.2",
     "pi-wifi": "^1.0.1"
   },
   "devDependencies":{
