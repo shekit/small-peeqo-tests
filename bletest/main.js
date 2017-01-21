@@ -19,7 +19,7 @@ app.on('ready', function(){
 		mainWindow.webContents.openDevTools();
 	} else {
 		// for full screen on pi
-		//mainWindow.webContents.openDevTools();
+		mainWindow.webContents.openDevTools();
 		//mainWindow.setMenu(null);
 		//mainWindow.setFullScreen(true);
 		//mainWindow.maximize();
