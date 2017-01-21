@@ -101,6 +101,7 @@ bleno.on('advertisingStop', function(){
 
 bleno.on('stateChange', function(state){
 	if(state === 'poweredOn'){
+		console.log("POWERED ON")
 		bleno.startAdvertising(ble_name, serviceUuid)
 	} else {
 		bleno.stopAdvertising();
