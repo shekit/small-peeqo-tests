@@ -11,7 +11,8 @@ if(!config || !config.speech || !config.speech.keyFilename || !config.speech.mod
 const Sonus = require('sonus')
 const speech = require('@google-cloud/speech')({
   projectId: config.speech.projectId,
-  keyFilename: path.join(__dirname, 'app/config/', config.speech.keyFilename)
+  keyFilename: path.join(__dirname, 'app/config/', config.speech.keyFilename),
+  "grpc.initial_reconnect_backoff_ms": 10000
 })
 
 let hotwords = []
